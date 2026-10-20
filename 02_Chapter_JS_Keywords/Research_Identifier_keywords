@@ -1,0 +1,53 @@
+# JavaScript Identifiers and Keywords: Complete Guide
+
+In JavaScript, **keywords** and **identifiers** form the core vocabulary of the language. Keywords act as the built-in commands and structures, while identifiers are the custom names you create.
+
+---
+
+## 1. Rules for JavaScript Identifiers
+
+An **identifier** is a sequence of characters used to name variables, functions, classes, objects, or properties. Every identifier must adhere to the following strict rules:
+
+* **First Character:** Must begin with a letter (A-Z or a-z), an underscore (`_`), or a dollar sign (`$`). **It cannot start with a number**.
+* **Subsequent Characters:** Can include letters, numbers (0-9), underscores (`_`), and dollar signs (`$`).
+* **No Special Characters or Spaces:** Spaces, hyphens (`-`), periods (`.`), and punctuation (like `@`, `#`, `!`) are strictly prohibited.
+* **Case Sensitivity:** JavaScript is completely case-sensitive. `age`, `Age`, and `AGE` are treated as three entirely separate identifiers.
+* **No Reserved Keywords:** You cannot use words that are already built into JavaScript's syntax (like `if`, `for`, `class`, or `const`) as identifiers.
+* **Unicode Support:** Beyond standard ASCII, JavaScript allows many Unicode characters (such as letters from different alphabets or specific symbols) as valid identifiers.
+
+### Examples of Identifiers
+
+| Valid Identifiers | Invalid Identifiers | Reason for Failure |
+| :--- | :--- | :--- |
+| `userName` | `1stPlace` | Starts with a number |
+| `_internalData` | `user-name` | Contains a hyphen (interpreted as subtraction) |
+| `$price` | `user name` | Contains a space |
+| `totalSum2` | `let` | Reserved keyword |
+
+---
+
+## 2. Rules for JavaScript Keywords
+
+**Keywords** (often referred to as reserved words) are predefined tokens that have a special meaning and behavior built directly into the JavaScript engine.
+
+* **Fixed Purpose:** Keywords inform the compiler or interpreter to execute specific actions (e.g., `let` and `const` declare variables, `if` begins a conditional statement).
+* **Strict Preservation:** They are completely off-limits for naming variables, functions, or blocks of code.
+* **Case Sensitivity:** Keywords must be written in exact lowercase format. For example, `for` is a keyword, but `For` or `FOR` are technically valid (though highly discouraged) identifiers.
+* **Contextual Reservations:** Some words are only reserved in specific contexts. For example, `await` is only a reserved keyword inside `async` functions, and words like `public`, `private`, and `let` have strict enforcement limitations when running in JavaScript's **Strict Mode**.
+
+### Common JavaScript Reserved Keywords
+* **Declarations:** `var`, `let`, `const`, `function`, `class`, `return`
+* **Control Flow:** `if`, `else`, `switch`, `case`, `break`, `continue`, `default`
+* **Loops:** `for`, `while`, `do`, `in`, `of`
+* **Logic & Values:** `true`, `false`, `null`, `typeof`, `instanceof`
+* **Error Handling:** `try`, `catch`, `finally`, `throw`
+
+---
+
+## 3. Industry Naming Conventions (Best Practices)
+
+While the rules above dictate what the language *allows*, the developer community heavily relies on consistent styles to keep code readable:
+
+* **camelCase:** The standard convention for variables and function names (e.g., `firstName`, `calculateTotal`).
+* **PascalCase:** Used primarily for naming classes and constructor functions (e.g., `UserAccount`, `SmartCar`).
+* **SCREAMING_SNAKE_CASE:** Used for global constants that never change values throughout the app's execution (e.g., `MAX_RETRIES`, `API_KEY`).
